@@ -246,6 +246,22 @@ $ kubectl --namespace monitoring port-forward $POD_NAME 3000
 
 ```
 
-kubectl -n monitoring port-forward service/grafana 3000
+kubectl --namespace monitoring port-forward service/grafana 3000:80
 
 http://localhost:3000 
+
+
+
+Vamos a añadir algunos dashboards editando el values ( hay muchos metodos para hacer esto )
+
+```
+sidecar:
+  datasources:
+    enabled: true
+    label: grafana_datasource
+  dashboards:
+    enabled: true
+    label: grafana_dashboard
+```
+
+helm upgrade --install grafana stable/grafana -f monitoring/grafana/values.yaml --namespace monitoring
