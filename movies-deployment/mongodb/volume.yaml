@@ -1,0 +1,13 @@
+kind: "PersistentVolume"
+apiVersion: "v1"
+metadata:
+  name: "mongo-volume-ebs" 
+spec:
+  capacity:
+    storage: "100Gi" 
+  storageClassName: gp2
+  accessModes:
+    - "ReadWriteOnce"
+  awsElasticBlockStore: 
+    fsType: "ext4" 
+    volumeID: "vol-0444ccf8604cf769e" 
