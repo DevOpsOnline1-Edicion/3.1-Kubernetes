@@ -357,7 +357,7 @@ kops delete cluster --name ${NAME} --yes
 ```
 
 
-## COMPONENTES
+## DESLPEGAR ALGUNOS COMPONENTES BASICOS
 
 * Web UI
 
@@ -377,9 +377,53 @@ https://www.weave.works/docs/scope/latest/installing/#k8s
 
 ### NETWORKS
 
+
+
 * port-forward
 
-```
-kubectl port-forward service movies-api
+Realizamos un mapeo de puertos mediante un port forward a traves del api de Kubernetes y de Kubectl de modo que si tenemos acceso a la nube de K8S con las credenciales adecuadas podremos acceder desde localhost practicamente a cualquier puerto de cualquier componente desplegado en K8s
 
 ```
+# a un pod por name
+
+kubectl port-forward redis-master-765d459796-258hz 7000:6379
+
+#  a un pod por name 
+
+kubectl port-forward pods/redis-master-765d459796-258hz 7000:6379
+
+# al deployment por name 
+
+kubectl port-forward deployment/redis-master 7000:6379
+
+# al replicaset por name
+
+kubectl port-forward replicaset/redis-master 7000:6379
+
+# al servicio por name 
+
+kubectl port-forward service/redis-master 7000:6379
+
+```
+
+
+* LoadBalancer
+
+Es la manera de conectar un servicio a internet de manera accesible, esto genera un balanceador de carga en el proveedor de infraestructura con los costes aplicados a este servicio como puerta de entrada
+
+![](https://i.imgur.com/FAzFtMQ.png)
+
+* NodePort
+
+Ocupamos un puerto real en el nodo de K8s donde se accede al servicio, esto implica que no podemos usar dos veces el mismo puerto o que no podamos desplegar servicios expuestos a internet en su puerto natural.  
+
+![](https://i.imgur.com/KFTPTJS.png)
+
+* Ingress
+
+![](https://i.imgur.com/Ti5p4Y7.png)
+
+
+
+### Nginx Ingress Controller
+
