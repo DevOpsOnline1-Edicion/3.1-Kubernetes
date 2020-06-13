@@ -1,0 +1,27 @@
+{
+    "Comment": "Create a subdomain NS record in the parent domain",
+    "Changes": [
+      {
+        "Action": "CREATE",
+        "ResourceRecordSet": {
+          "Name": "cluster-room.devopsgeekshubsacademy.click",
+          "Type": "NS",
+          "TTL": 300,
+          "ResourceRecords": [
+            {
+              "Value": "ns-1439.awsdns-51.org"
+            },
+            {
+              "Value": "ns-1994.awsdns-57.co.uk"
+            },
+            {
+              "Value": "ns-690.awsdns-22.net"
+            },
+            {
+              "Value": "ns-418.awsdns-52.com"
+            }
+          ]
+        }
+      }
+    ]
+  }

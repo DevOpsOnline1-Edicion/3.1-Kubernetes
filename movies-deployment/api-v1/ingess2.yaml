@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: metabase-ingress
+spec:
+  rules:
+    - host: a43d0e5bfeb1f4776a1d147981cbcee4-1054657804.eu-west-1.elb.amazonaws.com
+      http:
+        paths:
+          - backend:
+              serviceName: metabase
+              servicePort: 80
+            path: /metabase
