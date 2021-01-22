@@ -40,6 +40,9 @@ brew update && brew install kops
 
 ## Desplegando en AWS
 
+Todos las instrucciones estan probadas y funcionan con AWS CLI 1.X y no han sido probadas con AWS CLI 2.X que segun lo indicado en el siguiente articulo de la documentación sufre incompatibilidades de migración: 
+https://docs.aws.amazon.com/es_es/cli/latest/userguide/welcome-versions.html
+
 Damos por hecho que hemos instalado previamente Kops y Kubectl.
 
 
