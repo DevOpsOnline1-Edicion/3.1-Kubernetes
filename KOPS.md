@@ -43,6 +43,15 @@ brew update && brew install kops
 Todos las instrucciones estan probadas y funcionan con AWS CLI 1.X y no han sido probadas con AWS CLI 2.X que segun lo indicado en el siguiente articulo de la documentación sufre incompatibilidades de migración: 
 https://docs.aws.amazon.com/es_es/cli/latest/userguide/welcome-versions.html
 
+Podemos usar AWS-CLI en cualquier version en contenedores docker
+
+'
+docker run --rm -it amazon/aws-cli:latest --version
+'
+
+
+
+
 Damos por hecho que hemos instalado previamente Kops y Kubectl.
 
 
