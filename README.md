@@ -8,8 +8,11 @@
 * Conceptos Kubernetes
 * [Kubernetes en AWS](https://github.com/DevOpsOnline1-Edicion/3.1-Kubernetes/blob/master/AWS.md)
 * [Despliegue de Kubernetes](https://github.com/DevOpsOnline1-Edicion/3.1-Kubernetes/blob/master/KOPS.md)
+* [Helm](https://helm.sh/)
 * [Prometheus y Grafana](https://github.com/DevOpsOnline1-Edicion/3.1-Kubernetes/blob/master/MONITORING.md)
 * [Configuración Inverso](https://github.com/DevOpsOnline1-Edicion/3.1-Kubernetes/blob/master/PROXY.md)
+* [VPN](https://www.maquinasvirtuales.eu/instalar-openvpn-server-en-kubernetes/)
+* [GitOPS](https://github.com/fluxcd/flux)
 * [Cluster AutoScaling](https://github.com/DevOpsOnline1-Edicion/3.1-Kubernetes/blob/master/AUTOSCALER.md)
 <!-- --- -->
 
