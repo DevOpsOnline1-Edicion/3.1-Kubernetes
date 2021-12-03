@@ -332,6 +332,11 @@ Ahora damos el paso final de construir realmente el clúster. Esto llevará un t
 kops update cluster ${NAME} --yes
 ```
 
+### Obtener credenciales del cluster
+
+```
+kops export kubecfg ${NAME} --admin
+```
 
 ### Accediendo al Cluster
 
